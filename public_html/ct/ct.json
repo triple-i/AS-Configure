@@ -1,0 +1,40 @@
+{
+    "items": [
+    
+    {
+        "category": "Panel",
+        "cls_name": "ASC.view.container.Panel",
+        "screen_name": "パネル",
+        "explanation": "コンテナパネル"
+    },
+
+
+
+    {
+        "category": "Panel",
+        "cls_name": "ASC.view.panel.LaunchConfig",
+        "screen_name": "パネル",
+        "explanation": "LaunchConfigを管理するパネル"
+    },
+    
+    {
+        "category": "Grid",
+        "cls_name": "ASC.view.grid.LaunchConfigList",
+        "screen_name": "グリッド",
+        "explanation": "既存LaunchConfigを表示するグリッド"
+    },
+    
+    {
+        "category": "Form",
+        "cls_name": "ASC.view.form.LaunchConfigForm",
+        "screen_name": "フォーム",
+        "explanation": "新しいLaunchConfigを生成するフォーム"
+    },
+    
+    {
+        "category": "Window",
+        "cls_name": "ASC.view.window.BuildLaunchConfigCommand",
+        "screen_name": "ウィンドウ",
+        "explanation": "LaunchConfigを新規作成するコマンドを記載したウィンドウ"
+    }]
+}

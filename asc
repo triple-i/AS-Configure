@@ -1,0 +1,40 @@
+#!/usr/bin/env php
+<?php
+
+require_once(__DIR__.'/library/composer/vendor/autoload.php');
+
+use Asc\CLI;
+use Symfony\Component\ClassLoader\UniversalClassLoader;
+
+try {
+    define('DS', DIRECTORY_SEPARATOR);
+    define('ROOT_PATH', realpath(dirname(__FILE__)));
+    define('CMDS', ROOT_PATH.DS.'library'.DS.'Asc'.DS.'Commands');
+    define('DATA', ROOT_PATH.DS.'data');
+    define('APPLICATION_PATH', ROOT_PATH . '/application');
+    defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
+
+    set_include_path(dirname(__FILE__) . '/library' . PATH_SEPARATOR . get_include_path());
+
+
+    require_once ('Asc/CLI.php');
+
+    $autoloader = new UniversalClassLoader;
+    $autoloader->registerNamespaces(array('Asc'  => ROOT_PATH . '/library'));
+    $autoloader->useIncludePath(true);
+    $autoloader->register();
+
+    chdir(dirname(__FILE__));
+    $cli = CLI::getInstance();
+
+    if (count($argv) > 1) {
+        $cli->execute($argv);
+
+    } else {
+        $cli->renderCommandList(); 
+    }
+
+} catch (\Exception $e) {
+    echo PHP_EOL.'  ' .  pack('c',0x1B) . "[1;31m" .
+        $e->getMessage() . pack('c',0x1B) . "[0m" .PHP_EOL.PHP_EOL;
+}

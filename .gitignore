@@ -1,0 +1,9 @@
+.DS_Store
+
+application/configs/aws.ini
+
+data/user_data/*
+!data/user_data/.gitkeep
+
+library/composer/vendor/*
+

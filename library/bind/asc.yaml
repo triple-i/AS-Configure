@@ -1,0 +1,27 @@
+
+dest: public_html/resources/js/asc/app.js
+
+path: public_html/src/
+
+src:
+
+    # singleton
+    - app/Events.js
+    - app/Controllers.js
+
+
+    # controllers
+    - app/controller/form/LaunchConfigForm.js
+    - app/controller/window/BuildLaunchConfigCommand.js
+
+    # store
+    - app/store/grid/LaunchConfigList.js
+
+    # view
+    - app/view/grid/LaunchConfigList.js
+    - app/view/form/LaunchConfigForm.js
+    - app/view/window/BuildLaunchConfigCommand.js
+    - app/view/panel/LaunchConfig.js
+    
+
+    - app.js

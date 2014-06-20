@@ -1,0 +1,28 @@
+<phpunit bootstrap="./TestsBootstrap.php" colors="true" >
+
+    <!-- Direct -->
+    <testsuite name="ASC Direct TestSuite">
+        <directory>./application</directory>
+    </testsuite>
+
+    <!-- Library -->
+    <testsuite name="ASC Liberay TestSuite">
+        <directory>./library</directory>
+    </testsuite>
+
+
+    <filter>
+        <!-- If Zend Framework is inside your project's library, uncomment this filter -->
+        <whitelist>
+            <directory suffix=".php">../application/modules/direct</directory>
+            <directory suffix=".php">../library/Asc</directory>
+            <exclude>
+                <directory suffix=".php">../library/Asc/Commands</directory>
+                <file>../library/Asc/Model/AbstractModel.php</file>
+                <file>../library/Asc/Model/Column/ColumnInterface.php</file>
+                <file>../library/Asc/Model/Query/QueryInterface.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+
+</phpunit>
