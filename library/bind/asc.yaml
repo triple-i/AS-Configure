@@ -12,7 +12,7 @@ src:
 
     # controllers
     - app/controller/form/LaunchConfigForm.js
-    - app/controller/window/BuildLaunchConfigCommand.js
+    - app/controller/window/BuildCommand.js
 
     # store
     - app/store/grid/LaunchConfigList.js
@@ -20,7 +20,7 @@ src:
     # view
     - app/view/grid/LaunchConfigList.js
     - app/view/form/LaunchConfigForm.js
-    - app/view/window/BuildLaunchConfigCommand.js
+    - app/view/window/BuildCommand.js
     - app/view/panel/LaunchConfig.js
     
 

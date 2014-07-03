@@ -12,13 +12,11 @@ Ext.Loader.setConfig({
 
 Ext.direct.Manager.addProvider(ASC.REMOTING_API);
 Ext.application({
-    name: 'Asc',
     controllers: [
-        'ASC.controller.form.LaunchConfigForm',
-        'ASC.controller.window.BuildCommand'
+        'ASC.controller.grid.AutoScalingGroupList'
     ],
     launch: function () {
-        Ext.create('ASC.view.form.LaunchConfigForm', {
+        var panel = Ext.create('ASC.view.grid.AutoScalingGroupList', {
             width: 700,
             height: 600,
             renderTo: 'render-component'

@@ -1,12 +1,12 @@
 /**
- * ASC.view.window.buildlaunchconfigcommand
+ * ASC.view.window.BuildCommand
  * Copyright (c) 2014 iii-planning.com
  */
-Ext.define('ASC.view.window.BuildLaunchConfigCommand', {
+Ext.define('ASC.view.window.BuildCommand', {
 
     extend: 'Ext.window.Window',
 
-    alias: 'widget.window-BuildLaunchConfigCommand',
+    alias: 'widget.window-BuildCommand',
 
 
     initComponent: function () {
@@ -16,7 +16,7 @@ Ext.define('ASC.view.window.BuildLaunchConfigCommand', {
         me.buildCommandTextArea();
 
         Ext.apply(me, {
-            title: 'BuildLaunchConfigCommand',
+            title: 'BuildCommand',
             layout: 'fit',
             modal: true,
             buttons: [{

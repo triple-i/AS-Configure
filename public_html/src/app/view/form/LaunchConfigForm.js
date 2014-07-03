@@ -4,7 +4,7 @@
  */
 Ext.define('ASC.view.form.LaunchConfigForm', {
 
-    extend: 'Ext.form.Panel',
+    extend: 'ASC.view.form.BaseForm',
 
     alias: 'widget.form-LaunchConfigForm',
 
@@ -18,19 +18,6 @@ Ext.define('ASC.view.form.LaunchConfigForm', {
         me.buildInstanceTypeField();
         me.buildSecurityGroupField();
         me.buildUserDataField();
-
-        Ext.apply(me, {
-            defaults: {
-                allowBlank: false,
-                labelWidth: 120,
-                width: 500
-            },
-            bodyStyle: 'padding: 30px;',
-            buttons: [{
-                text: 'build',
-                action: 'build'
-            }]
-        });
 
         me.callParent(arguments);
     },

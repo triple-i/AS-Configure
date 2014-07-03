@@ -13,6 +13,7 @@ Ext.direct.Manager.addProvider(ASC.REMOTING_API);
 Ext.application({
     controllers: ASC.Controllers,
     launch: function () {
+        Ext.create('ASC.view.Viewport');
     }
 });
 

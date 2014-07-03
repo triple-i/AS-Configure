@@ -17,7 +17,7 @@ Ext.application({
     name: 'Asc',
     controllers: [
         'ASC.controller.form.LaunchConfigForm',
-        'ASC.controller.window.BuildLaunchConfigCommand'
+        'ASC.controller.window.BuildCommand'
     ],
     launch: function () {
         var panel = Ext.create('ASC.view.panel.LaunchConfig', {

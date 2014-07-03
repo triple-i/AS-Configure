@@ -68,7 +68,7 @@ Ext.onReady(function () {
             xtype: 'button',
             text: '結合テスト',
             handler: function () {
-                window.open('/?debug=ct');
+                window.open('/test/app?debug=ct');
             }
         }]
     });

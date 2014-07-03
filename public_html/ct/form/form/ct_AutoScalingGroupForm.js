@@ -14,14 +14,14 @@ Ext.direct.Manager.addProvider(ASC.REMOTING_API);
 Ext.application({
     name: 'Asc',
     controllers: [
-        'ASC.controller.window.BuildLaunchConfigCommand'
+        'ASC.controller.window.BuildCommand'
     ],
     launch: function () {
-        Ext.create('ASC.view.window.BuildLaunchConfigCommand', {
-            width: 550,
-            height: 400,
-            renderTo: Ext.getBody()
-        }).show();
+        Ext.create('ASC.view.form.AutoScalingGroupForm', {
+            width: 700,
+            height: 600,
+            renderTo: 'render-component'
+        });
     }
 });
 

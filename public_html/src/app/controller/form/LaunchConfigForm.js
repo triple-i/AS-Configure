@@ -18,7 +18,7 @@ Ext.define('ASC.controller.form.LaunchConfigForm', {
             },
 
             'form-LaunchConfigForm button[action="build"]': {
-                click: me.showCreateLaunchConfigCommandWindow
+                click: me.showCreateCommandWindow
             }
         });
     },
@@ -30,7 +30,7 @@ Ext.define('ASC.controller.form.LaunchConfigForm', {
      * @param  btn Button
      * @return void
      **/
-    showCreateLaunchConfigCommandWindow: function (btn) {
+    showCreateCommandWindow: function (btn) {
         var form = btn.up('form-LaunchConfigForm');
 
         if (form.getForm().isValid()) {
@@ -39,7 +39,7 @@ Ext.define('ASC.controller.form.LaunchConfigForm', {
             LaunchConfig.buildCreateCommand({
                 values: values
             }, function (response) {
-                Ext.create('ASC.view.window.BuildLaunchConfigCommand', {
+                Ext.create('ASC.view.window.BuildCommand', {
                     command: response.command,
                     width: 560,
                     height: 350

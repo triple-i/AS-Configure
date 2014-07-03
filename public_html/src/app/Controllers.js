@@ -10,5 +10,6 @@ ASC.Controllers = [
     // 必要なコントローラクラスを配列で記載する
     // e.g. 'ASC.controller.foo.bar',
     'ASC.controller.form.LaunchConfigForm',
-    'ASC.controller.window.BuildLaunchConfigCommand'
+    'ASC.controller.grid.AutoScalingGroupList',
+    'ASC.controller.window.BuildCommand'
 ];

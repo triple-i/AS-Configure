@@ -1,8 +1,8 @@
 /**
- * ASC.controller.window.BuildLaunchConfigCommand
+ * ASC.controller.window.BuildCommand
  * Copyright (c) 2014 iii-planning.com
  */
-Ext.define('ASC.controller.window.BuildLaunchConfigCommand', {
+Ext.define('ASC.controller.window.BuildCommand', {
 
     extend: 'Ext.app.Controller',
 
@@ -11,16 +11,16 @@ Ext.define('ASC.controller.window.BuildLaunchConfigCommand', {
         var me = this;
 
         me.control({
-            'window-BuildLaunchConfigCommand': {
+            'window-BuildCommand': {
                 afterrender: function (win) {
                     var textarea = win.down('textarea');
                     textarea.focus(true, 400);
                 }
             },
 
-            'window-BuildLaunchConfigCommand button[action="close"]': {
+            'window-BuildCommand button[action="close"]': {
                 click: function (btn) {
-                    var win = btn.up('window-BuildLaunchConfigCommand');
+                    var win = btn.up('window-BuildCommand');
                     win.close();
                 }
             }

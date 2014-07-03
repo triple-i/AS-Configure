@@ -33,4 +33,15 @@ class AutoScale extends AbstractAws
     {
         return $this->client->describeLaunchConfigurations();
     }
+
+
+    /**
+     * AutoScalingGroupのリストを取得する
+     *
+     * @return array
+     **/
+    public function getAutoScalingGroups ()
+    {
+        return $this->client->describeAutoScalingGroups();
+    }
 }

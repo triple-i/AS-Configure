@@ -8,8 +8,6 @@
         "explanation": "コンテナパネル"
     },
 
-
-
     {
         "category": "Panel",
         "cls_name": "ASC.view.panel.LaunchConfig",
@@ -22,6 +20,11 @@
         "cls_name": "ASC.view.grid.LaunchConfigList",
         "screen_name": "グリッド",
         "explanation": "既存LaunchConfigを表示するグリッド"
+    }, {
+        "category": "Grid",
+        "cls_name": "ASC.view.grid.AutoScalingGroupList",
+        "screen_name": "グリッド",
+        "explanation": "既存のAutoScalingGroupを表示するグリッド"
     },
     
     {
@@ -29,12 +32,17 @@
         "cls_name": "ASC.view.form.LaunchConfigForm",
         "screen_name": "フォーム",
         "explanation": "新しいLaunchConfigを生成するフォーム"
+    }, {
+        "category": "Form",
+        "cls_name": "ASC.view.form.AutoScalingGroupForm",
+        "screen_name": "フォーム",
+        "explanation": "新しいAutoScalingGroupを生成するフォーム"
     },
     
     {
         "category": "Window",
-        "cls_name": "ASC.view.window.BuildLaunchConfigCommand",
+        "cls_name": "ASC.view.window.BuildCommand",
         "screen_name": "ウィンドウ",
-        "explanation": "LaunchConfigを新規作成するコマンドを記載したウィンドウ"
+        "explanation": "AutoScalingコマンドを記載したウィンドウ"
     }]
 }
